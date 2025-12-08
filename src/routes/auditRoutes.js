@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
   try {
     const logs = await AuditLog.find()
       .sort({ timestamp: -1 })  // IMPORTANT
-      .limit(5);
+      .limit(3);
 
     res.json(logs);
   } catch (err) {
