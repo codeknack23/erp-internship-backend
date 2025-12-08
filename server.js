@@ -16,6 +16,13 @@ connectDB(process.env.MONGO_URI);
 app.use('/api/customers', customerRoutes);
 app.use('/api/vendors', vendorRoutes);
 app.use("/api/audit", require("./src/routes/auditRoutes"));
+app.use("/api/meta", require("./src/routes/metaRoutes"));
+app.use("/api/projects", require("./src/routes/projectRoutes"));
+app.use("/api/uploads", require("./src/routes/uploads"));
+
+
+
+
 
 
 app.get('/', (req, res) => res.send('ERP Internship Server is up-to-date'));
